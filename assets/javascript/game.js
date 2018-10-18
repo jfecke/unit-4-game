@@ -9,7 +9,6 @@ green: 0,
 win: 0,
 lose: 0,
 winCheck: function(){
-    $("#current").text(collector.currentScore);
     if (this.currentScore === this.goal) {
         this.gameState = 2;
         this.win += 1;
@@ -62,6 +61,5 @@ $("#btn-close").on("click", function(){
 $(".crystal").on("click", function(){
     collector.currentScore += collector[this.id];
     $("#current").text(collector.currentScore);
-    collector.winCheck();
-    
+    setTimeout(function() {collector.winCheck(); }, 1000);    
 })
