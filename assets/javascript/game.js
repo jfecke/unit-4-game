@@ -32,15 +32,15 @@ makeRandom: function() {
     collector.yellow = Math.floor(Math.random()*12)+1;
     collector.green = Math.floor(Math.random()*12)+1;
     used.push(collector.red);
-    while (used.indexOf(collector.blue) > 0 ) {
+    while (used.indexOf(collector.blue) >= 0 ) {
         collector.blue = Math.floor(Math.random()*12)+1;
     }
     used.push(collector.blue);
-    while (used.indexOf(collector.yellow) > 0 ) {
+    while (used.indexOf(collector.yellow) >= 0 ) {
         collector.yellow = Math.floor(Math.random()*12)+1;
     }
     used.push(collector.yellow);
-    while (used.indexOf(collector.green) > 0 ) {
+    while (used.indexOf(collector.green) >= 0 ) {
         collector.green = Math.floor(Math.random()*12)+1;
     }
     $("#goal").text(collector.goal);
