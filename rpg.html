@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LotR RPG</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <script   src="https://code.jquery.com/jquery-3.3.1.js"  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/rpg.css">
+    
+</head>
+<body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h1>Choose Your Champion!</h1>
+            <div id="crystals">
+                <div id="Aragorn" class="heroes"><img src="assets/images/Aragorn.jpg" alt=""></div>
+                <div id="Gimli" class="heroes"><img src="assets/images/Gimili.jpg" alt=""></div>
+                <div id="Legolas" class="heroes"><img src="assets/images/Legolas.jpg" alt=""></div>
+                <div id="Gandalf" class="heroes"><img src="assets/images/Gandalf.jpg" alt=""></div>
+            </div>
+        </div>
+        <div id="modal-end">You Win!</div>
+    </div>
+    <div id="title">
+        Crystal Collectors
+    </div>
+    
+    <div id="total-score">
+        <div class="points">
+            <h2>Goal:</h2>
+            <p id="goal">0</p>
+        </div>
+        <div class="points">
+            <h2>Current Score:</h2>
+            <p id="current">0</p>
+        </div>
+    </div>
+    <div class="container">
+        <div id="score">
+            <h2>Score:</h2>
+            <p>Win: <span id="win">0</span> Lose: <span id="lose">0</span></p>   
+        </div>
+    </div>
+
+    <script src="assets/javascript/rpg.js"></script>
+</body>
+</html>

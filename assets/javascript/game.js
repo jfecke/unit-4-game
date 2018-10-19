@@ -61,5 +61,5 @@ $("#btn-close").on("click", function(){
 $(".crystal").on("click", function(){
     collector.currentScore += collector[this.id];
     $("#current").text(collector.currentScore);
-    setTimeout(function() {collector.winCheck(); }, 1000);    
+    setTimeout(function() {collector.winCheck(); }, 500);    
 })
