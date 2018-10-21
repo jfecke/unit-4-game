@@ -55,6 +55,7 @@ enemyPwr: 0,
 enemyHP: 0,
 enemyMax: 0,
 gameState: 0,
+playedEnemies: 0,
 levelSelector: function() {
     if (this.gameState == 1) {
         this.enemy = villians.orc.name;
@@ -87,6 +88,8 @@ levelSelector: function() {
     }
     $("#enemy").attr("style", "background: url('assets/images/" + this.enemy + ".jpg'); background-size: cover;")
     $("body").attr("style", "background: url('assets/images/" + this.location + ".jpg'); background-size: cover;")
+    $("#enemy-current").attr("style", "width: " + (this.enemyHP/this.enemyMax)*100 + "% ")
+    $("#hvalue-enemy").text(this.enemyHP + "/" + this.enemyMax)
 },
 attack: function() {
     this.currentHP -= this.enemyPwr;
@@ -104,16 +107,20 @@ attack: function() {
 },
 winCheck: function() {
     if (this.enemyHP <= 0 ) {
-        alert("You Win");
-        this.gameState += 1;
+        $("#myModal").attr("style", "display:block;")
         this.levelSelector();
-        $("#enemy-current").attr("style", "width: " + (this.enemyHP/this.enemyMax)*100 + "% ")
-        $("#hvalue-enemy").text(this.enemyHP + "/" + this.enemyMax)
         this.heroPwr += heroes[this.hero].attackpower;
     }
     else if (this.currentHP <= 0) {
-        alert("You Lose.")
         $("#myModal").attr("style", "display:block;")
+        $(".enemy-selection").attr("style", "display:none;")
+        $(".lose-screen").attr("style", "display:block;")
+    }
+    if (this.playedEnemies == 4) {
+        $(".enemy-selection").attr("style", "display:none;")
+        $(".win-screen").attr("style", "display:block;")
+
+
     }
 },
 playGame: function() {
@@ -132,10 +139,22 @@ $(".heroes").on("click", function(){
     rpg.currentHP = heroes[this.id].maxHP;
     rpg.gameState = 1;
     $("#myHero").text(heroes[this.id].name);
-    $("#myModal").attr("style", "display:none;")
-    $("#hero").attr("style", "background: url('assets/images/" + heroes[this.id].name + ".jpg'); background-size: cover;")
-    setTimeout(function() {rpg.playGame(); }, 500);    
+    $(".hero-selection").attr("style", "display:none;")
+    $("#hero").attr("style", "background: url('assets/images/" + heroes[this.id].name + ".jpg'); background-size: cover; background-repeat: no-repeat;")
+    $(".enemy-selection").attr("style", "display:block;") 
 })
+
+$(".villians").on("click", function(){
+    $("#myModal").attr("style", "display:none;")
+    rpg.gameState = parseInt(this.id);
+    console.log(rpg.gameState);
+    rpg.playedEnemies += 1;
+    this.remove();
+    setTimeout(function(){rpg.playGame()}, 100)
+})
+
+
+
 
 $("#attack").on("click", function(){
     rpg.attack();

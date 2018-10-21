@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Collectors</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <script   src="https://code.jquery.com/jquery-3.3.1.js"  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/crystal.css">
+    
+</head>
+<body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h1>Welcome to Crystal Collectors!!</h1>
+            <p>&bull; At the start of the game you will be given a random number, your goal.</p>
+            <p>&bull; You will be presented with 4 crystals. Each crystal will be worth a specific number of points.</p>
+            <p>&bull; Unfortunatley for you, those points are hidden until you select it.</p>
+            <p>&bull; In order to win you must collect the exact numbers of points as your goal. If you go over, you lose.</p>
+            <p>&bull; Your number and the values of the crystals will randomize each game.</p>
+            <div>
+                <button id="btn-close">Begin</button>
+            </div>
+        </div>
+        <div id="modal-end">You Win!</div>
+    </div>
+    <div id="title">
+        Crystal Collectors
+    </div>
+    <div id="crystals">
+        <div id="red" class="crystal"><img src="assets/images/ruby.png" alt=""></div>
+        <div id="blue" class="crystal"><img src="assets/images/sapphire.png" alt=""></div>
+        <div id="yellow" class="crystal"><img src="assets/images/yellow.png" alt=""></div>
+        <div id="green" class="crystal"><img src="assets/images/emerald.png" alt=""></div>
+    </div>
+    <div id="total-score">
+        <div class="points">
+            <h2>Goal:</h2>
+            <p id="goal">0</p>
+        </div>
+        <div class="points">
+            <h2>Current Score:</h2>
+            <p id="current">0</p>
+        </div>
+    </div>
+    <div class="container">
+        <div id="score">
+            <h2>Score:</h2>
+            <p>Win: <span id="win">0</span> Lose: <span id="lose">0</span></p>   
+        </div>
+    </div>
+
+    <script src="assets/javascript/game.js"></script>
+</body>
+</html>

@@ -14,33 +14,45 @@ body{
     height: 100%; 
     overflow: auto; 
     background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.8);
+    /* background-color: rgba(0,0,0,0.8); */
 }
 
 .modal-content {
     display:block;
-    background-color: #fefefe;
+    background-color: #87857c;
     margin: 10% auto;
     padding: 30px 30px 10px 30px;
-    border: 3px solid teal;
-    width: 80%;
+    border: 5px solid black;
+    width: 75%;
 }
 
-#modal-end {
-    display:none;
-    background-color: #fefefe;
-    margin: 10% auto;
-    padding: 30px 30px 10px 30px;
-    border: 3px solid teal;
-    width: 80%;
+.enemy-selection {
+    display: none;
+}
+
+.win-screen {
+    display: none;
+}
+
+.lose-screen {
+    display: none;
 }
 
 .modal-content h1 {
     text-align: center;
-    font-size: 28px;
+    font-size: 48px;
     margin-bottom: 20px;
+    color: white;
     font-weight: bold;
-}   
+    font-family: 'Carter One', cursive;
+}
+
+.modal-content button {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    width: 300px;
+}
 
 #crystals {
     margin: 20px auto;
@@ -59,6 +71,21 @@ body{
 }
 
 .heroes img{
+    height: 300px;
+    width:300px;
+}
+
+.villians{
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    background: white;
+    margin: 0 auto;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.villians img{
     height: 300px;
     width:300px;
 }
@@ -104,14 +131,6 @@ body{
     width: 100%;
     height: 50px;
 }
-
-#enemy-health {
-    width: 300px;
-    height: 50px;
-    background: lightcoral;
-    float:right;
-}
-
 
 #hero-health {
     width: 300px;
@@ -176,11 +195,17 @@ body{
     top: 25%;
 }
 
+.center {
+    width: 300px;
+    margin: 0 auto;
+}
+
 #attack{
     height: 80px;
     width: 300px;
     color: white;
-    border: 10px solid white;
+    background: black;
+    border: 10px solid red;
     cursor: pointer;
     margin: 0 auto;
     text-align: center;
@@ -192,4 +217,161 @@ body{
     width: 100%;
     height:50px;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 1500px) {
+    #title{
+        width: 35%;
+        height:50px;
+        font-size: 32px;
+        padding: 10px;
+    }
+    
+    #battleground {
+        height: 300px;
+        width: 60%;
+    }
+    
+    #hero {
+        height: 200px;
+        width: 200px;
+    }
+    
+    #enemy {
+        height: 200px;
+        width: 200px;
+    }
+    
+    #hero-health {
+        width: 200px;
+        height: 50px;
+    }
+  
+    #enemy-health {
+        width: 200px;
+        height: 50px;
+    }
+
+    .heroes{
+        height: 150px;
+        width: 150px;
+    }
+
+    .heroes img{
+        height: 150px;
+        width: 150px;
+    }
+
+    .villians{
+        height: 150px;
+        width: 150px;
+    }
+
+    .villians img{
+        height: 150px;
+        width: 150px;
+    }
+
+    .modal-content {
+       width: 80%;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    #title{
+        width: 35%;
+        height:50px;
+        font-size: 32px;
+        padding: 10px;
+    }
+    
+    #battleground {
+        height: 150px;
+        width: 40%;
+        margin: 100px auto ;
+    }
+    
+    #hero {
+        height: 100px;
+        width: 100px;
+    }
+    
+    #enemy {
+        height: 100px;
+        width: 100px;
+    }
+    
+    #hero-health {
+        width: 100px;
+        height: 30px;
+    }
+  
+    #enemy-health {
+        width: 100px;
+        height: 30px;
+    }
+    
+    #hvalue-hero {
+        font-size: 20px;
+    }
+
+    #hvalue-enemy {
+        font-size: 20px;    
+    }
+
+    .heroes{
+        height: 100px;
+        width: 100px;
+    }
+
+    .heroes img{
+        height: 100px;
+        width: 100px;
+    }
+
+    .villians{
+        height: 100px;
+        width: 100px;
+    }
+
+    .villians img{
+        height: 100px;
+        width: 100px;
+    }
+
+    .modal-content h1 {
+        font-size: 40px;
+    }
+
+    .modal-content button {
+        font-size: 20px;
+        width: 150px;
+    }
+    .center {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #title{
+        width: 45%;
+        height:50px;
+        font-size: 24px;
+        padding: 10px;
+    }
+    
+    #battleground {
+        height: 150px;
+        width: 60%;
+        margin: 50px auto 20px auto;
+    }
+    #attack{
+        height: 50px;
+        width: 200px;
+        border: 10px solid red;
+        font-size: 28px;
+        padding-top: 1%;
+    }
+
 }
