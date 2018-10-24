@@ -90,6 +90,16 @@ body{
     width:300px;
 }
 
+.stats {
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    display: inline-block;
+    width: 300px;
+}
+
+
 .container {
     width: 100%;
     height:50px;
