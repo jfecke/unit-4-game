@@ -149,6 +149,7 @@ $(".villians").on("click", function(){
     console.log(rpg.gameState);
     rpg.playedEnemies += 1;
     this.remove();
+    $("#" + this.id).remove();
     setTimeout(function(){rpg.playGame()}, 100)
 })
 
