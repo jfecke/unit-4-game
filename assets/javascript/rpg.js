@@ -33,7 +33,7 @@ var villians = {
         maxHP: 775,
     },
     saruman: {
-        name: "Saruman",
+        name: "saruman",
         attackpower: 25,
         maxHP: 1275,    
     },
