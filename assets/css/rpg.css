@@ -267,6 +267,15 @@ body{
         width: 150px;
     }
 
+    .stats {
+        width: 150px;
+        font-size: 18px;
+    }
+
+    #crystals {
+        margin: 10px auto;
+    }
+
     .heroes img{
         height: 150px;
         width: 150px;
@@ -288,7 +297,7 @@ body{
     
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 780px) {
     #title{
         width: 35%;
         height:50px;
@@ -335,6 +344,10 @@ body{
         width: 100px;
     }
 
+    .stats{
+        width: 100px;
+        font-size: 20px;
+    }
     .heroes img{
         height: 100px;
         width: 100px;
@@ -372,7 +385,7 @@ body{
     }
     
     #battleground {
-        height: 150px;
+        min-height: 150px;
         width: 60%;
         margin: 50px auto 20px auto;
     }
